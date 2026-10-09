@@ -2,261 +2,313 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BharatPick | Discover Your Next Favourite</title>
-<meta name="description" content="Discover beautiful finds, everyday essentials and fresh inspiration with BharatPick.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#06172c">
+<meta name="description" content="BharatPick CCTV cameras, home security, business surveillance and professional installation.">
+<title>BharatPick | Security Made Smarter</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg:#10120f;
-  --card:#1b1e19;
-  --text:#f5f3eb;
-  --muted:#a4a79b;
-  --green:#d7fb72;
-  --line:#30332c;
+:root{--navy:#06172c;--blue:#087be8;--cyan:#20d7ef;--white:#fff;--muted:#b3c3d5;--light:#f0f7ff;--ink:#102947}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:Inter,Arial,sans-serif;background:var(--navy);color:white;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+.wrap{width:min(1160px,90%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:#06172cf2;border-bottom:1px solid #ffffff15;backdrop-filter:blur(16px)}
+nav{min-height:75px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.logo{font-size:25px;font-weight:800;letter-spacing:-1px}
+.logo span{color:var(--cyan)}
+.links{display:flex;align-items:center;gap:23px;font-size:13px;color:#d6e3f1}
+.links a:hover{color:var(--cyan)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:8px;font-weight:700;font-size:13px;border:1px solid transparent;cursor:pointer;transition:.25s}
+.btn-blue{background:var(--cyan);color:#03182b}
+.btn-blue:hover{background:#fff;transform:translateY(-2px)}
+.btn-outline{border-color:#91a8bf;color:white}
+.btn-outline:hover{border-color:var(--cyan);color:var(--cyan)}
+.hero{padding:72px 0 58px;background:radial-gradient(ellipse at 76% 40%,#087be83b,transparent 45%),linear-gradient(120deg,#06172c,#09284a)}
+.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:38px;align-items:center}
+.kicker{font-size:12px;letter-spacing:2px;font-weight:800;color:var(--cyan);margin-bottom:16px}
+h1{font-size:clamp(39px,5vw,63px);letter-spacing:-2.5px;line-height:1.08;margin-bottom:22px}
+h1 span,.accent{color:var(--cyan)}
+.hero-copy{font-size:15px;color:var(--muted);max-width:500px;margin-bottom:25px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-photo{position:relative}
+.hero-photo img{width:100%;height:370px;object-fit:cover;border-radius:17px;border:1px solid #20d7ef50;display:block}
+.photo-label{position:absolute;bottom:15px;left:15px;right:15px;padding:13px 15px;border-radius:9px;background:#06172cef;border:1px solid #ffffff1a;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.photo-label small{display:block;color:var(--muted)}
+.live{font-size:11px;color:var(--cyan);font-weight:700}
+.trust{border-block:1px solid #ffffff16;padding:22px 0}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;text-align:center}
+.trust strong{font-size:14px;display:block}
+.trust span{font-size:11px;color:var(--muted)}
+section{padding:75px 0}
+.section-head{text-align:center;max-width:680px;margin:0 auto 35px}
+.section-head h2{font-size:clamp(29px,4vw,40px);letter-spacing:-1.2px;line-height:1.2;margin-bottom:12px}
+.section-head p{font-size:14px;color:var(--muted)}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.product{background:#0b213a;border:1px solid #ffffff16;border-radius:13px;overflow:hidden;transition:.3s}
+.product:hover{transform:translateY(-6px);border-color:#20d7ef85;box-shadow:0 15px 40px #0003}
+.product img{width:100%;height:210px;object-fit:cover;display:block;background:#122a44}
+.product-info{padding:20px}
+.tag{color:var(--cyan);font-size:10px;letter-spacing:1.5px;font-weight:800;text-transform:uppercase}
+.product h3{font-size:18px;margin:6px 0}
+.product p{font-size:13px;color:var(--muted);margin-bottom:17px;min-height:42px}
+.product .btn{font-size:12px;padding:10px 13px}
+.services{background:var(--light);color:var(--ink)}
+.services .section-head p{color:#597089}
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.service{padding:24px 19px;background:white;border:1px solid #dbe8f5;border-radius:12px;transition:.25s}
+.service:hover{transform:translateY(-4px);box-shadow:0 12px 28px #153c6414}
+.service-icon{width:47px;height:47px;border-radius:12px;background:#e2f8fc;display:grid;place-items:center;font-size:23px;margin-bottom:15px}
+.service h3{font-size:16px;margin-bottom:8px}
+.service p{font-size:12px;color:#62768c}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:44px}
+.about-grid img{width:100%;height:330px;object-fit:cover;border-radius:14px}
+.about-grid h2{font-size:clamp(30px,4vw,42px);line-height:1.2;margin-bottom:16px}
+.about-grid p{color:var(--muted);font-size:14px;margin-bottom:17px}
+.point{font-size:13px;margin:12px 0}
+.point span{color:var(--cyan);margin-right:8px}
+.industries{background:linear-gradient(120deg,#0a2440,#06172c)}
+.industry-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.industry{height:145px;position:relative;overflow:hidden;border-radius:10px;background:#102c48}
+.industry img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.industry:hover img{transform:scale(1.08)}
+.industry strong{position:absolute;bottom:0;left:0;right:0;padding:30px 12px 12px;background:linear-gradient(transparent,#03101fe8);font-size:14px}
+.contact{background:var(--light);color:var(--ink)}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:start}
+.contact h2{font-size:37px;line-height:1.2;margin-bottom:12px}
+.contact-copy{color:#62768c;font-size:13px;margin-bottom:23px}
+.detail{margin:18px 0}
+.detail strong{display:block;font-size:14px}
+.detail span{font-size:12px;color:#62768c}
+.detail a:hover{color:var(--blue)}
+form{padding:24px;background:white;border:1px solid #dbe8f5;border-radius:13px;box-shadow:0 12px 30px #153c640b}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 15px}
+label{font-size:12px;font-weight:600;display:block;margin-bottom:5px}
+input,select,textarea{width:100%;padding:12px;margin-bottom:15px;border:1px solid #d4e0ec;border-radius:7px;background:#f8fbff;color:#102947;outline:none}
+input:focus,select:focus,textarea:focus{border-color:#087be8}
+textarea{min-height:95px;resize:vertical}
+form .btn{width:100%}
+footer{padding:27px 0;background:#041020;border-top:1px solid #ffffff17;color:var(--muted);font-size:12px}
+.footer-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-links{display:flex;gap:17px;flex-wrap:wrap}
+footer a:hover{color:var(--cyan)}
+@media(max-width:800px){
+ nav{min-height:68px}.links{gap:12px;font-size:11px}.links .hide-mobile{display:none}
+ .hero{padding:52px 0}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:28px}
+ .hero-photo img{height:300px}.products{grid-template-columns:repeat(2,1fr)}
+ .service-grid{grid-template-columns:repeat(2,1fr)}.industry-grid{grid-template-columns:repeat(2,1fr)}
 }
-* {box-sizing:border-box;margin:0;padding:0}
-html {scroll-behavior:smooth;scroll-padding-top:90px}
-body {background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.6}
-a {color:inherit;text-decoration:none}
-img {width:100%;height:100%;object-fit:cover;display:block}
-.wrap {width:min(1120px,90%);margin:auto}
-header {height:82px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
-.brand {font-size:22px;font-weight:700;letter-spacing:-1px;display:flex;align-items:center;gap:10px}
-.logo {width:35px;height:35px;background:var(--green);color:#10120f;border-radius:50%;display:grid;place-items:center;font-family:Georgia,serif;font-size:23px}
-.brand-name span {color:var(--green);font-weight:400}
-nav {display:flex;gap:30px;align-items:center;font-size:13px}
-nav a:hover,.link:hover {color:var(--green)}
-.pill {padding:10px 16px;border:1px solid #55594e;border-radius:30px}
-.menu {display:none;background:none;color:white;border:0;font-size:25px;cursor:pointer}
-.hero {min-height:620px;display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center;padding:65px 0 85px;position:relative}
-.eyebrow {font-size:10px;letter-spacing:2px;color:var(--muted);font-weight:700;margin-bottom:22px}
-.dot {display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-right:8px}
-h1 {font-size:clamp(45px,6vw,76px);line-height:1.07;letter-spacing:-3px;font-weight:500;margin-bottom:24px}
-h1 em,h2 em {font-family:"Playfair Display",serif;color:var(--green);font-weight:500}
-.intro {color:var(--muted);font-size:14px;max-width:460px;line-height:1.9}
-.actions {display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:30px}
-.btn {background:var(--green);color:#151710;padding:14px 19px;border-radius:30px;font-size:12px;font-weight:700;display:inline-flex;gap:22px;align-items:center;transition:.25s}
-.btn:hover {transform:translateY(-3px);background:#e6ff9f}
-.link {font-size:12px;font-weight:600}
-.link span {color:var(--green)}
-.note {margin-top:48px;font-size:10px;color:var(--muted);letter-spacing:.5px}
-.visual {height:430px;position:relative;margin:10px 0 10px 12px}
-.visual img {border-radius:5px;filter:saturate(.75)}
-.visual:after {content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,#0009);pointer-events:none}
-.stamp {position:absolute;z-index:2;top:35px;left:-25px;background:var(--green);color:#11140e;width:95px;height:95px;border-radius:50%;display:grid;place-content:center;text-align:center;line-height:1.15;transform:rotate(-12deg);font-size:11px;font-weight:700}
-.stamp small {font-size:9px;letter-spacing:2px}
-.caption {position:absolute;z-index:3;bottom:18px;left:18px;right:18px;display:flex;justify-content:space-between;font-size:9px;letter-spacing:1.5px}
-.scroll {position:absolute;bottom:20px;left:0;right:0;border-top:1px solid var(--line);padding-top:13px;display:flex;justify-content:space-between;font-size:9px;letter-spacing:1.5px;color:var(--muted)}
-.scroll span:nth-child(2) {color:var(--green);font-size:16px}
-section.content {padding:95px 0 100px}
-.heading {display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:38px}
-h2 {font-size:clamp(36px,4.5vw,53px);font-weight:500;letter-spacing:-2px;line-height:1.15}
-.sub {font-size:13px;color:var(--muted);max-width:340px;line-height:1.8}
-.grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:23px}
-.product {min-width:0}
-.photo {height:300px;position:relative;overflow:hidden;background:var(--card)}
-.photo img {filter:saturate(.8);transition:transform .7s,filter .7s}
-.photo:hover img {transform:scale(1.06);filter:saturate(1)}
-.number {position:absolute;top:14px;left:14px;background:#10120fd9;padding:5px 9px;font-size:10px}
-.arrow {position:absolute;right:14px;bottom:14px;background:var(--green);color:#10120f;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-size:19px}
-.meta {display:flex;justify-content:space-between;color:var(--green);font-size:9px;letter-spacing:1.5px;margin-top:17px}
-.meta span:last-child {color:#7f8276}
-h3 {font-size:19px;font-weight:500;margin:7px 0 4px}
-.description {font-size:12px;color:var(--muted)}
-.about {background:#181a16;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.about-grid {display:grid;grid-template-columns:.85fr 1fr;gap:85px;align-items:center}
-.portrait {height:400px;position:relative}
-.portrait img {filter:saturate(.7)}
-.tag {position:absolute;bottom:18px;left:18px;background:var(--green);color:#10120f;padding:9px 12px;font-size:9px;letter-spacing:1px;font-weight:700}
-.about-copy h2 {margin-bottom:24px}
-.about-copy p:not(.eyebrow) {color:var(--muted);font-size:13px;line-height:1.9;margin-bottom:14px}
-.contact-box {position:relative;overflow:hidden;text-align:center;background:var(--card);border:1px solid var(--line);padding:70px 20px}
-.contact-box h2 {margin-bottom:16px}
-.contact-box p:not(.eyebrow) {color:var(--muted);font-size:13px;margin-bottom:25px}
-.spark {position:absolute;right:9%;top:15%;font-size:45px;color:var(--green);animation:spin 18s linear infinite}
-footer {border-top:1px solid var(--line);padding:25px 0;display:flex;justify-content:space-between;align-items:center;gap:20px}
-footer p,footer a:last-child {font-size:10px;color:var(--muted)}
-.reveal {opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
-.reveal.show {opacity:1;transform:translateY(0)}
-@keyframes spin {to{transform:rotate(360deg)}}
-@media(max-width:800px) {
-  .hero {gap:28px}
-  .visual {height:360px}
-  .grid {gap:14px}
-  .photo {height:240px}
-  .about-grid {gap:40px}
-}
-@media(max-width:560px) {
-  header {height:72px}
-  .menu {display:block}
-  nav {display:none;position:absolute;z-index:10;top:65px;left:5%;width:90%;padding:22px;background:#1b1e19;border:1px solid var(--line);flex-direction:column;gap:22px}
-  nav.open {display:flex}
-  .hero {grid-template-columns:1fr;gap:25px;padding:50px 0 80px}
-  h1 {font-size:48px;letter-spacing:-2px}
-  .intro {font-size:13px}
-  .note {margin-top:30px}
-  .visual {height:340px;margin:5px 0 10px 12px}
-  .stamp {width:80px;height:80px;left:-15px}
-  section.content {padding:70px 0}
-  .heading {align-items:start;flex-direction:column;gap:18px}
-  .grid {grid-template-columns:1fr;gap:35px}
-  .photo {height:330px}
-  .about-grid {grid-template-columns:1fr;gap:35px}
-  .portrait {height:340px}
-  .contact-box {padding:60px 15px}
-  .spark {right:5%;top:5%;font-size:30px}
-  footer {flex-wrap:wrap}
-  footer p {order:3;width:100%}
-}
-@media(prefers-reduced-motion:reduce) {
-  *,*::before,*::after {animation:none!important;scroll-behavior:auto!important;transition:none!important}
-  .reveal {opacity:1;transform:none}
+@media(max-width:480px){
+ .wrap{width:92%}.logo{font-size:21px}.links{gap:10px}
+ .links a{font-size:10px}.links .hide-mobile{display:none}
+ .hero-grid{gap:25px}h1{font-size:42px}
+ .hero-photo img{height:250px}
+ .trust-grid{grid-template-columns:repeat(2,1fr);row-gap:18px}
+ section{padding:55px 0}
+ .products{grid-template-columns:1fr}
+ .product img{height:225px}
+ .service-grid{grid-template-columns:1fr 1fr;gap:10px}
+ .service{padding:16px 12px}.service h3{font-size:14px}
+ .industry-grid{gap:9px}.industry{height:115px}
+ .form-grid{grid-template-columns:1fr}
+ form{padding:17px}.contact h2{font-size:32px}
 }
 </style>
 </head>
 
 <body>
-<div class="wrap">
 <header>
-  <a href="#home" class="brand">
-    <span class="logo">B</span>
-    <span class="brand-name">Bharat<span>Pick</span></span>
-  </a>
-  <button class="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
-  <nav>
-    <a href="#picks">My Picks</a>
-    <a href="#about">About</a>
-    <a href="#contact" class="pill">Say Hello ↗</a>
+  <nav class="wrap">
+    <a class="logo" href="#home">Bharat<span>Pick</span></a>
+    <div class="links">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#services">Services</a>
+      <a class="hide-mobile" href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="btn btn-blue" href="#contact">Get a Quote</a>
   </nav>
 </header>
 
 <main>
 <section class="hero" id="home">
-  <div class="reveal">
-    <p class="eyebrow"><span class="dot"></span>A LITTLE CORNER OF THE INTERNET</p>
-    <h1>Good things.<br><em>Picked with purpose.</em></h1>
-    <p class="intro">Welcome to BharatPick — my personal space for sharing favourite finds, fresh ideas, and things that make everyday life more interesting.</p>
-    <div class="actions">
-      <a class="btn" href="#picks">Explore My Picks <span>↘</span></a>
-      <a class="link" href="#about">A little about me <span>↗</span></a>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker">CCTV SECURITY SOLUTIONS</div>
+      <h1>Smart Security<br>for a <span>Safer Tomorrow.</span></h1>
+      <p class="hero-copy">Protect what matters most with BharatPick. Discover quality CCTV cameras, smart surveillance systems, and professional installation for homes and businesses.</p>
+      <div class="actions">
+        <a class="btn btn-blue" href="#products">Explore Cameras ↗</a>
+        <a class="btn btn-outline" href="#contact">Get a Free Quote</a>
+      </div>
     </div>
-    <p class="note">Thoughtful finds. Personal taste. No noise.</p>
-  </div>
-  <div class="visual reveal">
-    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1100&q=85" alt="Fashion inspiration">
-    <div class="stamp"><small>MY</small> GOOD<br>FINDS ✳</div>
-    <div class="caption"><span>THE EDIT</span><span>01 / EVERYDAY STYLE</span></div>
-  </div>
-  <div class="scroll"><span>SCROLL TO DISCOVER</span><span>↓</span><span>EST. 2026</span></div>
-</section>
-
-<section class="content" id="picks">
-  <div class="heading reveal">
-    <div><p class="eyebrow">THE COLLECTION / 001</p><h2>Things I’m <em>into.</em></h2></div>
-    <p class="sub">A collection of things I love, use, or find inspiring. Think of it as my digital moodboard.</p>
-  </div>
-  <div class="grid">
-    <article class="product reveal">
-      <a class="photo" href="#contact">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85" alt="Minimal watch">
-        <span class="number">01</span><span class="arrow">↗</span>
-      </a>
-      <div class="meta"><span>EVERYDAY</span><span>01 — 03</span></div>
-      <h3>Everyday Essentials</h3>
-      <p class="description">Simple pieces that make daily routines feel special.</p>
-    </article>
-    <article class="product reveal">
-      <a class="photo" href="#contact">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=900&q=85" alt="Interior design inspiration">
-        <span class="number">02</span><span class="arrow">↗</span>
-      </a>
-      <div class="meta"><span>SPACES</span><span>02 — 03</span></div>
-      <h3>Spaces & Objects</h3>
-      <p class="description">Little details that bring a room and a mood together.</p>
-    </article>
-    <article class="product reveal">
-      <a class="photo" href="#contact">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=85" alt="Notebook and creative desk">
-        <span class="number">03</span><span class="arrow">↗</span>
-      </a>
-      <div class="meta"><span>INSPIRATION</span><span>03 — 03</span></div>
-      <h3>Creative Inspiration</h3>
-      <p class="description">Ideas, notes, and visuals that get the mind moving.</p>
-    </article>
-  </div>
-</section>
-
-<section class="content about" id="about">
-  <div class="about-grid">
-    <div class="portrait reveal">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=85" alt="Portrait in natural light">
-      <span class="tag">A PERSONAL PROJECT ✳</span>
-    </div>
-    <div class="about-copy reveal">
-      <p class="eyebrow">BEHIND THE PICKS</p>
-      <h2>Hi, welcome to <em>BharatPick.</em></h2>
-      <p>This is where I collect the things I’m curious about — from useful everyday finds to visual inspiration and little discoveries worth sharing.</p>
-      <p>Think of it as a personal journal, with a bit of style and a lot of heart.</p>
-      <a class="link" href="#contact">Let’s connect <span>↗</span></a>
+    <div class="hero-photo">
+      <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1000&q=85" alt="Modern security camera protecting a property">
+      <div class="photo-label">
+        <div><strong>Security you can trust</strong><small>For homes, shops and offices</small></div>
+        <span class="live">SMART SECURITY</span>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="content" id="contact">
-  <div class="contact-box reveal">
-    <span class="spark">✳</span>
-    <p class="eyebrow">HAVE A GOOD FIND?</p>
-    <h2>Let’s talk about <em>it.</em></h2>
-    <p>Have a recommendation, an idea, or just want to say hello?</p>
-    <a class="btn" href="mailto:hello@bharatpick.example">Get in touch <span>↗</span></a>
+<div class="trust">
+  <div class="wrap trust-grid">
+    <div><strong>◈ Quality Products</strong><span>Reliable security equipment</span></div>
+    <div><strong>⌘ Expert Installation</strong><span>Professional setup</span></div>
+    <div><strong>◉ Smart Monitoring</strong><span>Keep an eye on your property</span></div>
+    <div><strong>✓ Customer Support</strong><span>Help when you need it</span></div>
+  </div>
+</div>
+
+<section id="products">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">OUR COLLECTION</div>
+      <h2>Find Your <span class="accent">Security Solution</span></h2>
+      <p>Explore camera types for different properties and security requirements. Contact us for models and pricing.</p>
+    </div>
+    <div class="products">
+      <article class="product">
+        <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=700&q=80" alt="CCTV security camera">
+        <div class="product-info"><span class="tag">Indoor and outdoor</span><h3>Dome Cameras</h3><p>A discreet camera option for homes, shops and offices.</p><a class="btn btn-blue" href="#contact">Enquire Now ↗</a></div>
+      </article>
+      <article class="product">
+        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3a5a9e1b?auto=format&fit=crop&w=700&q=80" alt="Security equipment">
+        <div class="product-info"><span class="tag">Outdoor protection</span><h3>Bullet Cameras</h3><p>Visible surveillance for entrances, boundaries and parking.</p><a class="btn btn-blue" href="#contact">Enquire Now ↗</a></div>
+      </article>
+      <article class="product">
+        <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=700&q=80" alt="Night surveillance">
+        <div class="product-info"><span class="tag">Advanced monitoring</span><h3>Night Vision Cameras</h3><p>Ask about suitable cameras for low-light conditions.</p><a class="btn btn-blue" href="#contact">Enquire Now ↗</a></div>
+      </article>
+      <article class="product">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=700&q=80" alt="Electronic technology">
+        <div class="product-info"><span class="tag">Connected security</span><h3>Wi-Fi Cameras</h3><p>Convenient connected camera options for compatible setups.</p><a class="btn btn-blue" href="#contact">Enquire Now ↗</a></div>
+      </article>
+      <article class="product">
+        <img src="https://images.unsplash.com/photo-1551703599-6b3e8379aa8b?auto=format&fit=crop&w=700&q=80" alt="Networking and technology">
+        <div class="product-info"><span class="tag">Recording systems</span><h3>DVR and NVR</h3><p>Explore recording and storage solutions for your cameras.</p><a class="btn btn-blue" href="#contact">Enquire Now ↗</a></div>
+      </article>
+      <article class="product">
+        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=700&q=80" alt="Technical installation work">
+        <div class="product-info"><span class="tag">Complete solution</span><h3>CCTV Packages</h3><p>Ask for a tailored camera and installation package.</p><a class="btn btn-blue" href="#contact">Get a Quote ↗</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">WHAT WE DO</div>
+      <h2>Security from Start to <span class="accent">Finish</span></h2>
+      <p>Product guidance, installation and ongoing support for your security setup.</p>
+    </div>
+    <div class="service-grid">
+      <article class="service"><div class="service-icon">⌂</div><h3>Home Security</h3><p>Help protect entrances, rooms, parking areas and your property.</p></article>
+      <article class="service"><div class="service-icon">▦</div><h3>Business Security</h3><p>Surveillance options for shops, offices, warehouses and workplaces.</p></article>
+      <article class="service"><div class="service-icon">⚒</div><h3>Installation</h3><p>Camera placement, setup and installation based on your requirements.</p></article>
+      <article class="service"><div class="service-icon">⚙</div><h3>Maintenance</h3><p>Ask us about troubleshooting, servicing and system upgrades.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=85" alt="Technical professional working with equipment">
+    <div>
+      <div class="kicker">WHY BHARATPICK</div>
+      <h2>Helping You Feel <span class="accent">Safer Every Day.</span></h2>
+      <p>Every property has different security needs. BharatPick helps you explore suitable CCTV equipment and installation options for your space and budget.</p>
+      <div class="point"><span>✓</span> Product options for different requirements</div>
+      <div class="point"><span>✓</span> Solutions for homes and businesses</div>
+      <div class="point"><span>✓</span> Installation enquiries and support</div>
+      <div class="point"><span>✓</span> Guidance on cameras and recording systems</div>
+      <br><a href="#contact" class="btn btn-blue">Talk to Our Team ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="industries">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">BUILT FOR YOUR SPACE</div>
+      <h2>One Brand. <span class="accent">Many Applications.</span></h2>
+      <p>Explore surveillance solutions for different types of properties.</p>
+    </div>
+    <div class="industry-grid">
+      <div class="industry"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80" alt="House"><strong>⌂ Homes</strong></div>
+      <div class="industry"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=500&q=80" alt="Retail shop"><strong>▣ Shops</strong></div>
+      <div class="industry"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=500&q=80" alt="Office"><strong>▦ Offices</strong></div>
+      <div class="industry"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=500&q=80" alt="Warehouse"><strong>▤ Warehouses</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="kicker">LET'S CONNECT</div>
+      <h2>Make Your Space <span class="accent">More Secure.</span></h2>
+      <p class="contact-copy">Tell us what you need. Send an enquiry through WhatsApp to discuss cameras, installation and pricing.</p>
+      <div class="detail"><strong>✆ Contact BharatPick</strong><span>Replace the WhatsApp placeholder with your business number.</span></div>
+      <div class="detail"><strong>⌂ Our solutions</strong><span>Homes · Shops · Offices · Commercial properties</span></div>
+      <div class="detail"><strong>◷ Enquiries</strong><span>Share your requirements and preferred contact time.</span></div>
+    </div>
+
+    <form id="enquiryForm">
+      <div class="form-grid">
+        <div><label for="name">Full Name *</label><input id="name" name="name" placeholder="Your name" required></div>
+        <div><label for="phone">Phone Number *</label><input id="phone" name="phone" type="tel" placeholder="Your number" required></div>
+        <div><label for="type">Property Type</label><select id="type" name="type"><option>Home</option><option>Shop</option><option>Office</option><option>Warehouse</option><option>Other</option></select></div>
+        <div><label for="service">Interested In</label><select id="service" name="service"><option>CCTV Cameras</option><option>Installation</option><option>Complete CCTV Package</option><option>Maintenance</option><option>Other</option></select></div>
+      </div>
+      <label for="message">Your Requirements *</label>
+      <textarea id="message" name="message" placeholder="Tell us about your security needs..." required></textarea>
+      <button class="btn btn-blue" type="submit">Send Enquiry on WhatsApp ↗</button>
+      <p style="font-size:11px;color:#62768c;margin-top:10px">Your enquiry will open in WhatsApp for you to send.</p>
+    </form>
   </div>
 </section>
 </main>
 
 <footer>
-  <a href="#home" class="brand"><span class="logo">B</span><span class="brand-name">Bharat<span>Pick</span></span></a>
-  <p>Made with curiosity. © <span id="year">2026</span> BharatPick</p>
-  <a href="#home">BACK TO TOP ↑</a>
+  <div class="wrap footer-row">
+    <a class="logo" href="#home">Bharat<span>Pick</span></a>
+    <div class="footer-links"><a href="#home">Home</a><a href="#products">Products</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+    <span>© <span id="year"></span> BharatPick. All rights reserved.</span>
+  </div>
 </footer>
-</div>
 
 <script>
-const menu = document.querySelector(".menu");
-const nav = document.querySelector("nav");
+document.getElementById("year").textContent = new Date().getFullYear();
 
-menu.addEventListener("click", () => {
-  const open = nav.classList.toggle("open");
-  menu.setAttribute("aria-expanded", String(open));
+document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  // Replace this with your WhatsApp number, including country code.
+  // Example format for India: 919876543210
+  const whatsappNumber = "91YOURNUMBER";
+
+  if (whatsappNumber === "91YOURNUMBER") {
+    alert("Please add your WhatsApp number in the website code before using the enquiry form.");
+    return;
+  }
+
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const property = document.getElementById("type").value;
+  const service = document.getElementById("service").value;
+  const message = document.getElementById("message").value.trim();
+
+  const text = `Hello BharatPick! I want to enquire about CCTV security.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AProperty: ${encodeURIComponent(property)}%0AInterested in: ${encodeURIComponent(service)}%0ARequirements: ${encodeURIComponent(message)}`;
+
+  window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "_blank");
 });
-
-nav.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("open");
-    menu.setAttribute("aria-expanded", "false");
-  });
-});
-
-document.querySelector("#year").textContent = new Date().getFullYear();
-
-const items = document.querySelectorAll(".reveal");
-
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {threshold: 0.12});
-
-  items.forEach(item => observer.observe(item));
-} else {
-  items.forEach(item => item.classList.add("show"));
-}
 </script>
 </body>
 </html>
